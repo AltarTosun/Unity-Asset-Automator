@@ -37,7 +37,6 @@ Improve runtime performance (CPU, GPU, memory)
   - Compressed (mobile-friendly)  
   - Optimized for performance  
 
----
 
 ###  Models
 
@@ -50,7 +49,6 @@ Improve runtime performance (CPU, GPU, memory)
   - Animation optimized  
   - Unnecessary data removed  
 
----
 
 ###  Audio
 
