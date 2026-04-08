@@ -24,36 +24,42 @@ Improve runtime performance (CPU, GPU, memory)
 - Prevents incorrect import settings  
 - Uses internal marker system to avoid reprocessing  
 
-##  What Happens Automatically
+## What Happens Automatically
 
-### Textures
+###  Textures
 
-TS_ → Imported as Sprite
-No mipmaps
-Alpha preserved
-Optimized for UI
+- **TS_** → Imported as Sprite  
+  - No mipmaps  
+  - Alpha preserved  
+  - Optimized for UI  
 
-T_ → Imported as Default Texture
-Compressed (mobile-friendly)
-Optimized for performance
+- **T_** → Imported as Default Texture  
+  - Compressed (mobile-friendly)  
+  - Optimized for performance  
 
-### Models
-SM_ (Static Mesh)
-No animation, cameras, or lights imported
-Materials not auto-generated
-Optimized for runtime performance
+---
 
-RM_ (Rigged Mesh)
-Animation optimized
-Unnecessary data removed
+###  Models
 
-### Audio
-SFX_
-Converted to mono
-Optimized for fast playback
-Lower memory usage
+- **SM_** (Static Mesh)  
+  - No animation, cameras, or lights imported  
+  - Materials not auto-generated  
+  - Optimized for runtime performance  
 
-Music_
-Streaming enabled
-Higher quality compression
-Optimized for longer playback
+- **RM_** (Rigged Mesh)  
+  - Animation optimized  
+  - Unnecessary data removed  
+
+---
+
+###  Audio
+
+- **SFX_**  
+  - Converted to mono  
+  - Optimized for fast playback  
+  - Lower memory usage  
+
+- **Music_**  
+  - Streaming enabled  
+  - Higher quality compression  
+  - Optimized for longer playback  
