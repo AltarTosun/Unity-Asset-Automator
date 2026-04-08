@@ -1,63 +1,63 @@
 # Unity-Asset-Automator
 
-A Unity AssetPostprocessor tool that automatically applies optimized import settings based on asset naming conventions.  Designed to reduce manual setup, enforce consistency, and improve mobile performance across projects.
+A Unity AssetPostprocessor tool that automatically applies optimized import settings based on asset naming conventions.
 
-##  Purpose
+Designed to reduce manual setup, enforce consistency, and improve mobile performance across projects.
 
-Reduce manual work
-Enforce consistency across the project
-Improve runtime performance (CPU, GPU, memory)
+## Purpose
 
-##  Naming Convention
+- Reduce manual work  
+- Enforce consistency across the project  
+- Improve runtime performance (CPU, GPU, memory)  
 
-- `TS_` → UI Sprites (no mipmaps, alpha optimized)  
+## Naming Convention
+
+- `TS_` → UI sprites (no mipmaps, alpha optimized)  
 - `T_` → Default textures (ASTC compressed)  
 - `SM_` → Static meshes (no animation, no extra data)  
 - `RM_` → Rigged meshes (optimized animation settings)  
 - `SFX_` → Memory-efficient audio  
 - `Music_` → Streaming audio  
 
-##  Key Features
+## Key Features
 
 - Fully automatic on import  
 - Platform-specific texture optimization (ASTC)  
 - Prevents incorrect import settings  
-- Uses internal marker system to avoid reprocessing  
+- Uses an internal marker system to avoid reprocessing  
 
 ## What Happens Automatically
 
-###  Textures
+### Textures
 
-- **TS_** → Imported as Sprite  
+- `TS_` → Imported as Sprite  
   - No mipmaps  
   - Alpha preserved  
   - Optimized for UI  
 
-- **T_** → Imported as Default Texture  
+- `T_` → Imported as Default Texture  
   - Compressed (mobile-friendly)  
   - Optimized for performance  
 
+### Models
 
-###  Models
-
-- **SM_** (Static Mesh)  
+- `SM_` (Static Mesh)  
   - No animation, cameras, or lights imported  
-  - Materials not auto-generated  
+  - Materials are not auto-generated  
   - Optimized for runtime performance  
 
-- **RM_** (Rigged Mesh)  
+- `RM_` (Rigged Mesh)  
   - Animation optimized  
   - Unnecessary data removed  
 
+### Audio
 
-###  Audio
-
-- **SFX_**  
+- `SFX_`  
   - Converted to mono  
   - Optimized for fast playback  
   - Lower memory usage  
 
-- **Music_**  
+- `Music_`  
   - Streaming enabled  
   - Higher quality compression  
   - Optimized for longer playback  
